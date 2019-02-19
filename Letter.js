@@ -7,7 +7,7 @@ this.character = char
 this.guessed = false;
 }
 //prototype function that returns either the character if guessed = t or _ if guessed = f
-Letter.prototype.retChar = function(){
+Letter.prototype.toString = function(){
     if(this.guessed){
         return this.character;
     }
@@ -24,12 +24,14 @@ Letter.prototype.updateGuessed = function(guess){
 
 var first = new Letter("k")
 
-console.log(first.character + " " + first.guessed + " " + first.retChar());
+console.log(first.character + " " + first.guessed);
 
 first.updateGuessed("l");
 
-console.log(first.character + " " + first.guessed + " " + first.retChar());
+console.log(first.character + " " + first.guessed);
 
 first.updateGuessed("k");
 
-console.log(first.character + " " + first.guessed + " " + first.retChar());
+console.log(first.character + " " + first.guessed);
+
+module.exports = Letter;
