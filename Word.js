@@ -51,3 +51,5 @@ someWord.checkLetters("j");
 console.log(someWord.revealedWord(0));
 
 console.log(someWord.letters);
+
+module.exports = Word;
