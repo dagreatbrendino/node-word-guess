@@ -21,17 +21,4 @@ Letter.prototype.updateGuessed = function(guess){
         this.guessed = true;
     }
 }
-
-var first = new Letter("k")
-
-console.log(first.character + " " + first.guessed);
-
-first.updateGuessed("l");
-
-console.log(first.character + " " + first.guessed);
-
-first.updateGuessed("k");
-
-console.log(first.character + " " + first.guessed);
-
 module.exports = Letter;

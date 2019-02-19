@@ -23,10 +23,31 @@ Word.prototype.buildWord = function(ind){
     }
 }
 
+Word.prototype.checkLetters = function(guess){
+    this.letters.forEach( function(item){
+       item.updateGuessed(guess);
+    });
+}
+
 var someWord = new Word("jack");
 
 someWord.buildWord(0);
 
+console.log(someWord.revealedWord(0));
+
+console.log(someWord.letters);
+
+someWord.checkLetters("l");
+
+console.log(someWord.revealedWord(0));
+
+console.log(someWord.letters);
+
+someWord.checkLetters("k");
+console.log(someWord.revealedWord(0));
+
+console.log(someWord.letters);
+someWord.checkLetters("j");
 console.log(someWord.revealedWord(0));
 
 console.log(someWord.letters);
